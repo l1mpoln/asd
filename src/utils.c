@@ -6,7 +6,7 @@
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:34:56 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/30 13:19:18 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:07:38 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	open_files(t_cmd *cmd, char *first_path, char *second_path)
 	cmd->fd_in = open (first_path, O_RDONLY);
 	if (cmd->fd_in < 0)
 		ft_error("Error.");
-	cmd->fd_out = open (second_path, O_WRONLY | O_TRUNC | O_CREAT, 777);
+	cmd->fd_out = open (second_path, O_WRONLY | O_TRUNC | O_CREAT, 06444);
 	if (cmd->fd_out < 0)
 		ft_error("Error.");
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   comands.c                                          :+:      :+:    :+:   */
+/*   commands.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 15:45:35 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/30 13:21:52 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:06:56 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	first_command(t_cmd *cmd, char **av, char **envp)
 		struct_free(cmd);
 		child_error("Unavaible command");
 		exit(1);
-		
 	}
 	execve(cmd->command, cmd->cmd_args, envp);
 }
